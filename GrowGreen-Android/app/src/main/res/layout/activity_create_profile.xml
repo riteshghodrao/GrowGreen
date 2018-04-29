@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateProfileActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_horizontal"
+            android:text="@string/create_profile"
+            android:textColor="#000000"
+            android:textSize="32sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="18dp"
+            android:gravity="center_horizontal"
+            android:text="@string/please_enter_your_personal_details_to_create_your_profile"
+            android:textColor="#212121"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/create_profile_name_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawablePadding="10dp"
+            android:drawableStart="@drawable/ic_account"
+            android:hint="@string/name"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/ic_gender"
+                android:gravity="center"
+                android:text="@string/gender"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <RadioGroup
+                android:id="@+id/create_profile_gender_radio_group"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/male_gender_radio_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="GenderSelected"
+                    android:text="@string/male" />
+
+                <RadioButton
+                    android:id="@+id/female_gender_radio_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="GenderSelected"
+                    android:text="@string/female" />
+
+                <RadioButton
+                    android:id="@+id/other_gender_radio_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="GenderSelected"
+                    android:text="@string/other" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/ic_calendar"
+                android:gravity="center"
+                android:text="@string/date_of_birth"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/create_profile_dob_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/dd_mm_yyyy"
+                android:padding="4dp"
+                android:singleLine="true"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+
+
+        <EditText
+            android:id="@+id/create_profile_mobile_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawablePadding="10dp"
+            android:drawableStart="@drawable/ic_call"
+            android:hint="@string/enter_your_mobile"
+            android:inputType="phone"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/create_profile_address_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawablePadding="10dp"
+            android:drawableStart="@drawable/ic_address"
+            android:hint="@string/enter_your_address"
+            android:inputType="text"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/create_profile_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:background="#3F51B5"
+            android:text="@string/create_profile"
+            android:textAllCaps="true"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+
+        <ProgressBar
+            android:id="@+id/create_profile_progressBar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center|bottom"
+            android:layout_marginBottom="20dp"
+            android:visibility="gone" />
+    </LinearLayout>
+</ScrollView>

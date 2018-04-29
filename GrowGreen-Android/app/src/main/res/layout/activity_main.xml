@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:context=".MainActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    android:text="@string/profile_name"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/profile_name_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Please Check your Internet Connection."
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    android:text="@string/profile_email_id"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/profile_email_textView"
+                    android:layout_width="257dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Please Check your Internet Connection"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/sign_out"
+                style="?android:textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/colorPrimary"
+                android:text="@string/btn_sign_out"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/send_password_reset_email"
+                style="?android:textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/colorPrimary"
+                android:text="@string/send_password_reset_email"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <ProgressBar
+                android:id="@+id/profile_progressBar"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center|bottom"
+                android:layout_marginBottom="20dp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="241dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.767">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#607D8B"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_weight="1"
+                android:padding="3dip"
+                android:text="Latest Status :" />
+
+            <TextView
+                android:id="@+id/timestamp"
+                android:layout_width="223dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="0dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:padding="3dip" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ECEFF1"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="149dp"
+                android:layout_weight="1"
+                android:padding="3dip"
+                android:text="Soil Moisture :"
+                android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                tools:targetApi="lollipop" />
+
+            <TextView
+                android:id="@+id/moisture"
+                android:layout_width="223dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="0dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:hint="moisture"
+                android:padding="3dip"
+                android:text="No Internet"
+                android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                tools:targetApi="lollipop" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ECEFF1"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_weight="1"
+                android:padding="3dip"
+                android:text="Temperature :"
+                android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                tools:targetApi="lollipop" />
+
+            <TextView
+                android:id="@+id/temperature"
+                android:layout_width="223dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="0dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:hint="temperature"
+                android:padding="3dip"
+                android:text="No Internet"
+                android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                tools:targetApi="lollipop" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ECEFF1"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_weight="1"
+                android:padding="3dip"
+                android:text="Humidity:"
+                android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                tools:targetApi="lollipop" />
+
+            <TextView
+                android:id="@+id/humidity"
+                android:layout_width="223dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="0dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:hint="humidity"
+                android:padding="3dip"
+                android:text="No Internet"
+                android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                tools:targetApi="lollipop" />
+
+        </TableRow>
+    </TableLayout>
+    <Button
+        android:id="@+id/controlPanel"
+        style="?android:textAppearanceSmall"
+        android:layout_width="134dp"
+
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+
+        android:background="@color/colorPrimary"
+        android:text="Control Panel"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:onClick="refresh"
+        android:text="REFRESH"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.836" />
+
+</android.support.constraint.ConstraintLayout>
